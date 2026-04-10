@@ -1,0 +1,12 @@
+/build/
+/.idea/
+/.vscode/
+/cmake-build-*/
+/models/*.onnx
+/models/*.pt
+/models/*.pth
+*.exe
+*.dll
+*.so
+*.dylib
+.DS_Store
