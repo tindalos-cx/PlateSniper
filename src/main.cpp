@@ -1,19 +1,17 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <iostream>
+#include "gui/main_window.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     app.setApplicationName("PlateSniper");
     app.setOrganizationName("PlateSniper");
+    app.setApplicationVersion("1.0.0");
 
-    // TODO: Initialize ModelManager and load ONNX models
-    // TODO: Create and show MainWindow
+    platesniper::MainWindow window;
+    window.show();
 
-    QMessageBox::information(nullptr, "PlateSniper",
-                             "PlateSniper initialized.\n"
-                             "GUI implementation is in progress.");
-
-    return 0;
+    return app.exec();
 }

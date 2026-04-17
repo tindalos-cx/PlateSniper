@@ -82,4 +82,22 @@ ONNX 模型需放入 `models/` 目录：
 
 ## 当前状态
 
-本项目目前为骨架项目。CMakeLists.txt 中定义了完整的文件结构，但当前仅实现了 `src/main.cpp`、`src/core/detection.h` 和 `src/core/detection.cpp`。其余源文件需根据设计规格 `docs/superpowers/specs/2026-04-10-plate-recognition-design.md` 进行创建。
+**已实现全部模块**：
+
+| 模块 | 文件 | 状态 |
+|------|------|------|
+| 核心数据结构 | `src/core/detection.h/.cpp` | ✅ |
+| 车牌检测器 | `src/core/plate_detector.h/.cpp` | ✅ |
+| 车牌矫正器 | `src/core/plate_corrector.h/.cpp` | ✅ |
+| 车牌识别器 | `src/core/plate_recognizer.h/.cpp` | ✅ |
+| ONNX 会话 | `src/models/onnx_session.h/.cpp` | ✅ |
+| 模型管理器 | `src/models/model_manager.h/.cpp` | ✅ |
+| 图像工具 | `src/utils/image_utils.h/.cpp` | ✅ |
+| 配置管理 | `src/utils/config.h/.cpp` | ✅ |
+| 主窗口 | `src/gui/main_window.h/.cpp` | ✅ |
+| 图像视图 | `src/gui/image_view.h/.cpp` | ✅ |
+| 结果面板 | `src/gui/result_panel.h/.cpp` | ✅ |
+
+**待完成**：
+- 添加测试文件（`tests/`）
+- 准备预训练 ONNX 模型文件
